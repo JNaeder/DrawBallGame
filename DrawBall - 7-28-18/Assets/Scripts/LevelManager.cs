@@ -59,6 +59,12 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    public void ReloadCurrentLevel() {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
+
+    }
+
 
 
 }

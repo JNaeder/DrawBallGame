@@ -8,8 +8,9 @@ public class Line : MonoBehaviour {
 
     LineRenderer lineRend;
     EdgeCollider2D edgeColl;
-
+    Drawing_GameManager dGM;
     Camera cam;
+
 
     Vector3 touchPos;
 
@@ -23,6 +24,7 @@ public class Line : MonoBehaviour {
 
 		lineRend = GetComponent<LineRenderer>();
 		edgeColl = GetComponent<EdgeCollider2D>();
+        dGM = FindObjectOfType<Drawing_GameManager>();
 
 		cam = Camera.main;
 
@@ -44,14 +46,11 @@ public class Line : MonoBehaviour {
 			if (!hasEnded)
 			{
 
-				if (touch.phase == TouchPhase.Moved)
+				if (touch.phase == TouchPhase.Moved && dGM.maxLineLength > 0)
 				{
 
                     touchPos = cam.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10));
-					//touchPos.x -= 0.5f;
-					//touchPos.x = touchPos.x * Screen.width * 0.01f;
-					//touchPos.y -= 0.5f;
-					//touchPos.y = touchPos.y * Screen.height * 0.01f;
+					
 
 					if (Mathf.Abs(lastPos.x - touchPos.x) > threshold || Mathf.Abs(lastPos.y - touchPos.y) > threshold)
 					{
@@ -60,6 +59,8 @@ public class Line : MonoBehaviour {
 						lineRend.SetPosition(linePositions.Count - 1, touchPos);
 						edgeColl.points = linePositions.ToArray();
 						lastPos = touchPos;
+
+                        dGM.maxLineLength--;
 					}
 
 				}

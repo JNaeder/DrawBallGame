@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Drawing_GameManager : MonoBehaviour {
 
 	public GameObject line;
-	public GameObject ball;
+	
     public float gravityMult;
 
     public int score;
     public float timeScore, finalTimeScore;
 
-    public TextMeshProUGUI scoreNum, WinScore, timeNum, winTimeScore ;
+    public TextMeshProUGUI scoreNum, WinScore, timeNum, winTimeScore, highscoreNum ;
 
     bool hasStarted, hasWon;
 
     DrawCoin[] drawCoins;
 
     LevelManager lM;
+    HighScoreManager hSM;
 
 	Rigidbody2D ballRB;
+    GameObject ball;
 
     Vector2 gravitySetting;
     Vector3 startingBallPos;
@@ -29,16 +32,31 @@ public class Drawing_GameManager : MonoBehaviour {
     public int startingCoinNum, currentCoinNum;
 
 
+    public float maxLineLength;
+    public Image lineLeftImageBar;
+    float lineLeftPerc, startingLineLength;
+    Vector3 lineLeftImageBarScale;
+
+    private void Awake()
+    {
+        ball = FindObjectOfType<Ball>().gameObject;
+    }
+
+
     // Use this for initialization
     void Start () {
         lM = FindObjectOfType<LevelManager>();
-
+        hSM = FindObjectOfType<HighScoreManager>();
+        
 		ballRB = ball.GetComponent<Rigidbody2D>();
         drawCoins = FindObjectsOfType<DrawCoin>();
         startingCoinNum = drawCoins.Length;
         currentCoinNum = startingCoinNum;
 
         startingBallPos = ball.transform.position;
+
+        startingLineLength = maxLineLength;
+        
 	}
 
 	
@@ -46,10 +64,13 @@ public class Drawing_GameManager : MonoBehaviour {
 	void Update () {
         SetGravity();
         CheckWin();
+        SetLineLeftBar();
+
         scoreNum.text = score.ToString();
         WinScore.text = score.ToString();
         timeNum.text = timeScore.ToString("F2");
         winTimeScore.text = finalTimeScore.ToString("F2");
+        highscoreNum.text = hSM.GetHighScoreForLevel().ToString("F2");
 
 
         if (hasStarted) {
@@ -61,7 +82,7 @@ public class Drawing_GameManager : MonoBehaviour {
 		if(Input.touchCount  > 0){
 			Touch touch = Input.GetTouch(0);
 
-			if(touch.phase == TouchPhase.Began){
+			if(touch.phase == TouchPhase.Began && maxLineLength > 0){
 				GameObject newLine = Instantiate(line, Vector2.zero, Quaternion.identity);
 
 			}
@@ -81,10 +102,18 @@ public class Drawing_GameManager : MonoBehaviour {
     void CheckWin() {
         if (currentCoinNum <= 0) {
             lM.WinScreen();
+            hasWon = true;
+            
+            if (timeScore < hSM.GetHighScoreForLevel())
+            {
+                hSM.SetNewHighScore(timeScore);
 
+            }
+            finalTimeScore = timeScore;
         }
-        hasWon = true;
-        finalTimeScore = timeScore;
+        
+
+        
     }
 
 
@@ -102,6 +131,15 @@ public class Drawing_GameManager : MonoBehaviour {
         newTime = Time.time;
         hasStarted = true;
 	}
+
+    void SetLineLeftBar() {
+        lineLeftPerc = maxLineLength / startingLineLength;
+        lineLeftImageBarScale = new Vector3(lineLeftPerc, 1, 1);
+        lineLeftImageBar.transform.localScale = lineLeftImageBarScale;
+
+
+    }
+
 
 
     public void ResetBall() {
