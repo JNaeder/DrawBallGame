@@ -31,4 +31,15 @@ public class LevelButton : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void HideText()
+    {
+        foreach (TextMeshProUGUI t in levelInfo)
+        {
+            t.gameObject.SetActive(false);
+
+        }
+
+
+    } 
 }

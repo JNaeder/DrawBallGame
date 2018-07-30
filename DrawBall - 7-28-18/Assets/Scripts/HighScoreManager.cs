@@ -39,4 +39,15 @@ public class HighScoreManager : MonoBehaviour {
 
 
     }
+
+    public void OpenAllStages()
+    {
+        for (int i = 1; i < 10; i++)
+        {
+            PlayerPrefs.SetFloat("Level_" + i,50);
+
+        }
+
+
+    }
 }

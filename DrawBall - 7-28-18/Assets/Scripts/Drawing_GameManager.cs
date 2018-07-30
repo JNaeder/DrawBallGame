@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Drawing_GameManager : MonoBehaviour {
 
 	public GameObject line;
+    public Color lineColor = Color.white;
 	
     public float gravityMult;
 
@@ -84,7 +85,9 @@ public class Drawing_GameManager : MonoBehaviour {
 
 			if(touch.phase == TouchPhase.Began && maxLineLength > 0){
 				GameObject newLine = Instantiate(line, Vector2.zero, Quaternion.identity);
-
+                LineRenderer newLineRend = newLine.GetComponent<LineRenderer>();
+                newLineRend.startColor = lineColor;
+                newLineRend.endColor = lineColor;
 			}
 
 
