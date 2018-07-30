@@ -54,6 +54,8 @@ public class Drawing_GameManager : MonoBehaviour {
         startingCoinNum = drawCoins.Length;
         currentCoinNum = startingCoinNum;
 
+		gravityMult = LevelManager.gravityMult;
+
         startingBallPos = ball.transform.position;
 
         startingLineLength = maxLineLength;

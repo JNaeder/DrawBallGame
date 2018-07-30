@@ -2,22 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
 
 	public GameObject pauseScreen, gameOver, winScreen;
+	public TextMeshProUGUI gravityNum;
+
+
+	public static float gravityMult;
+	public float gravity;
+	public Slider gravSlider;
+
 
 	// Use this for initialization
 	void Start()
 	{
         Time.timeScale = 1;
+
+		if(gravSlider != null){
+			SetGravityLevel();
+
+		}
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-
+		gravity = gravityMult;
+		Debug.Log(gravity + " " + gravityMult);
 	}
 
 	public void LoadScene(int sceneNum)
@@ -64,6 +79,20 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(currentScene);
 
     }
+
+	public void SetGravityLevel(){
+		gravSlider.value = LevelManager.gravityMult;
+		Debug.Log(gravSlider.value);
+		Debug.Log(LevelManager.gravityMult);
+	}
+
+
+	public void ChangeGravity(float newG){
+
+		gravityMult = newG;
+		gravityNum.text = newG.ToString("F2");
+
+	}
 
 
 
