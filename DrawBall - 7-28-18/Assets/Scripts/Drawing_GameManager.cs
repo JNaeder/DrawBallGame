@@ -38,6 +38,8 @@ public class Drawing_GameManager : MonoBehaviour {
     float lineLeftPerc, startingLineLength;
     Vector3 lineLeftImageBarScale;
 
+	public bool usePhoneGravity;
+
     private void Awake()
     {
         ball = FindObjectOfType<Ball>().gameObject;
@@ -54,7 +56,7 @@ public class Drawing_GameManager : MonoBehaviour {
         startingCoinNum = drawCoins.Length;
         currentCoinNum = startingCoinNum;
 
-		gravityMult = LevelManager.gravityMult;
+		//gravityMult = LevelManager.gravityMult;
 
         startingBallPos = ball.transform.position;
 
@@ -77,29 +79,53 @@ public class Drawing_GameManager : MonoBehaviour {
 
 
         if (hasStarted) {
-            
-                timeScore = Time.time - newTime;
+			if (!hasWon)
+			{
+				timeScore = Time.time - newTime;
+			}
             
         }
 
-		if(Input.touchCount  > 0){
-			Touch touch = Input.GetTouch(0);
+		//DrawLineWithFinger();
+		DrawLineWithMouse();
 
-			if(touch.phase == TouchPhase.Began && maxLineLength > 0){
-				GameObject newLine = Instantiate(line, Vector2.zero, Quaternion.identity);
+	}
+
+	void DrawLineWithFinger(){
+		if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began && maxLineLength > 0)
+            {
+                GameObject newLine = Instantiate(line, Vector2.zero, Quaternion.identity);
                 LineRenderer newLineRend = newLine.GetComponent<LineRenderer>();
                 newLineRend.startColor = lineColor;
                 newLineRend.endColor = lineColor;
-			}
+            }
 
 
-			if(touch.phase == TouchPhase.Ended){
+            if (touch.phase == TouchPhase.Ended)
+            {
 
 
 
-			}
+            }
+
+        }
+
+	}
+
+	void DrawLineWithMouse(){
+
+		if(Input.GetMouseButtonDown(0) && maxLineLength > 0){
+			GameObject newLine = Instantiate(line, Vector2.zero, Quaternion.identity);
+            LineRenderer newLineRend = newLine.GetComponent<LineRenderer>();
+            newLineRend.startColor = lineColor;
+            newLineRend.endColor = lineColor;
 
 		}
+
 
 	}
 
@@ -108,13 +134,13 @@ public class Drawing_GameManager : MonoBehaviour {
         if (currentCoinNum <= 0) {
             lM.WinScreen();
             hasWon = true;
-            
-            if (timeScore < hSM.GetHighScoreForLevel())
+			finalTimeScore = timeScore;
+			if (finalTimeScore < hSM.GetHighScoreForLevel())
             {
-                hSM.SetNewHighScore(timeScore);
+				hSM.SetNewHighScore(finalTimeScore);
 
             }
-            finalTimeScore = timeScore;
+            
         }
         
 
@@ -123,8 +149,16 @@ public class Drawing_GameManager : MonoBehaviour {
 
 
     void SetGravity() {
-        Vector2 accelPos = Input.acceleration * gravityMult;
-        Physics2D.gravity = accelPos;
+        
+
+		if(!usePhoneGravity){
+			Physics2D.gravity = new Vector2(0, - 20);
+
+		} else {
+			gravityMult = 20;
+			Vector2 accelPos = Input.acceleration * gravityMult;
+            Physics2D.gravity = accelPos;
+		}
 
 
     }

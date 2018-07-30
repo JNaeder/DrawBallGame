@@ -23,7 +23,7 @@ public class LevelButtonManager : MonoBehaviour {
 	}
 
     void SetEveryButtonAboveToDisable(int levelNum) {
-        for (int i = levelNum; i < 9; i++) {
+        for (int i = levelNum; i < 6; i++) {
             Button newButton = levelButtons[i].GetComponent<Button>();
             newButton.interactable = false;
             levelButtons[i].HideText();

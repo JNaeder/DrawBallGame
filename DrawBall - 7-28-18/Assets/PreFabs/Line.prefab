@@ -56,9 +56,7 @@ EdgeCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.011102974, y: 2.525437}
-  - {x: 1.0911031, y: 2.525437}
+  m_Points: []
 --- !u!114 &114190982065588392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4f8b7f7db814978b7b377acaf9178a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.25
+  threshold: 0.2
 --- !u!120 &120301975211208684
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -78,10 +76,10 @@ LineRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646711980093566}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
+  m_MotionVectors: 2
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
@@ -154,10 +152,10 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 62
+    numCornerVertices: 90
+    numCapVertices: 90
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0

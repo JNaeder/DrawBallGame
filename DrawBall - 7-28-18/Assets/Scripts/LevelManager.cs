@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
 	public float gravity;
 	public Slider gravSlider;
 
+	public bool isPaused;
+
 
 	// Use this for initialization
 	void Start()
@@ -32,7 +34,6 @@ public class LevelManager : MonoBehaviour
 	void Update()
 	{
 		gravity = gravityMult;
-		Debug.Log(gravity + " " + gravityMult);
 	}
 
 	public void LoadScene(int sceneNum)
@@ -43,6 +44,7 @@ public class LevelManager : MonoBehaviour
 
     public void ResetBall() {
         Time.timeScale = 1;
+		isPaused = false;
         pauseScreen.SetActive(false);
         gameOver.SetActive(false);
         winScreen.SetActive(false);
@@ -53,28 +55,33 @@ public class LevelManager : MonoBehaviour
 	{
 		Time.timeScale = 0;
 		pauseScreen.SetActive(true);
+		isPaused = true;
 
 	}
 
 	public void UnPause()
 	{
 		Time.timeScale = 1;
+		isPaused = false;
 		pauseScreen.SetActive(false);
 	}
 
     public void GameOverScreen() {
         Time.timeScale = 0;
+		isPaused = true;
         gameOver.SetActive(true);
 
     }
 
     public void WinScreen() {
         Time.timeScale = 0;
+		isPaused = true;
         winScreen.SetActive(true);
 
     }
 
     public void ReloadCurrentLevel() {
+		isPaused = false;
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
 
@@ -82,8 +89,6 @@ public class LevelManager : MonoBehaviour
 
 	public void SetGravityLevel(){
 		gravSlider.value = LevelManager.gravityMult;
-		Debug.Log(gravSlider.value);
-		Debug.Log(LevelManager.gravityMult);
 	}
 
 
