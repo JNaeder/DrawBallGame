@@ -3267,32 +3267,32 @@ Prefab:
     - target: {fileID: 114638572224715252, guid: cb191f99f77deba4a8b96a5f65af9d39,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114638572224715252, guid: cb191f99f77deba4a8b96a5f65af9d39,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114248930419222116, guid: cb191f99f77deba4a8b96a5f65af9d39,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114248930419222116, guid: cb191f99f77deba4a8b96a5f65af9d39,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114319619660049304, guid: cb191f99f77deba4a8b96a5f65af9d39,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114319619660049304, guid: cb191f99f77deba4a8b96a5f65af9d39,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114876741923846034, guid: cb191f99f77deba4a8b96a5f65af9d39,
         type: 2}
@@ -3309,6 +3309,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114876741923846034, guid: cb191f99f77deba4a8b96a5f65af9d39,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb191f99f77deba4a8b96a5f65af9d39, type: 2}
