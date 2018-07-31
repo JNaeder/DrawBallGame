@@ -17,6 +17,7 @@ public class Drawing_GameManager : MonoBehaviour {
     public TextMeshProUGUI scoreNum, WinScore, timeNum, winTimeScore, highscoreNum ;
 
     bool hasStarted, hasWon;
+    public bool isDrawing, isErasing;
 
     DrawCoin[] drawCoins;
 
@@ -86,10 +87,36 @@ public class Drawing_GameManager : MonoBehaviour {
             
         }
 
-		//DrawLineWithFinger();
-		DrawLineWithMouse();
+        //DrawLineWithFinger();
+
+        if (isDrawing)
+        {
+            DrawLineWithMouse();
+        }
+        else if (isErasing)
+        {
+            
+
+        }
+        else {
+
+
+        }
 
 	}
+
+
+    public void EraseLineWithMouse(GameObject line) {
+       
+        Line newLine = line.GetComponent<Line>();
+        LineRenderer newLineRend = newLine.GetComponent<LineRenderer>();
+        float lineLength = newLineRend.positionCount - 2;
+
+        
+        maxLineLength += lineLength;
+        Destroy(line);
+    }
+
 
 	void DrawLineWithFinger(){
 		if (Input.touchCount > 0)
@@ -185,6 +212,7 @@ public class Drawing_GameManager : MonoBehaviour {
         currentCoinNum = startingCoinNum;
         ballRB.isKinematic = true;
         ballRB.velocity = Vector2.zero;
+        ballRB.angularVelocity = 0;
         hasStarted = false;
 
         for (int i = 0; i < drawCoins.Length; i++) {
@@ -192,7 +220,29 @@ public class Drawing_GameManager : MonoBehaviour {
 
         }
 
+        ResetObject[] resetObjects = FindObjectsOfType<ResetObject>();
+        for (int i = 0; i < resetObjects.Length; i++) {
+            resetObjects[i].Reset();
+
+        }
+
+
         ball.transform.position = startingBallPos;
+
+    }
+
+
+
+    public void SetMode(string mode) {
+        if (mode == "Draw")
+        {
+            isDrawing = true;
+            isErasing = false;
+        }
+        else if (mode == "Erase") {
+            isDrawing = false;
+            isErasing = true;
+        }
 
     }
 

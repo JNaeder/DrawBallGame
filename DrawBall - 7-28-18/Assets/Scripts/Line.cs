@@ -41,13 +41,24 @@ public class Line : MonoBehaviour {
 		//DrawWithFinger();
 		DrawWithMouse();
 
-
-
+        
 	}
 
 
+    private void OnMouseDown()
+    {
+        if (dGM.isErasing == true)
+        {
+            dGM.EraseLineWithMouse(gameObject);
+        }
 
-	void DrawWithMouse() { 
+
+
+    }
+
+
+
+    void DrawWithMouse() { 
 		if(!hasEnded){
 			if(Input.GetMouseButton(0) && dGM.maxLineLength > 0){
 				touchPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));

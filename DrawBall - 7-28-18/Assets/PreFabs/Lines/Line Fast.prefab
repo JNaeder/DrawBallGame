@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 120301975211208684}
   - component: {fileID: 68802455713010448}
   - component: {fileID: 114190982065588392}
-  m_Layer: 0
-  m_Name: Line
+  - component: {fileID: 252849731674051268}
+  m_Layer: 8
+  m_Name: Line Fast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,10 +53,10 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.08
   m_Points: []
 --- !u!114 &114190982065588392
 MonoBehaviour:
@@ -159,3 +160,20 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!252 &252849731674051268
+SurfaceEffector2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646711980093566}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 8
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 1
+  m_UseFriction: 1
+  m_UseBounce: 1

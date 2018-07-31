@@ -9,32 +9,32 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1172817762793220}
+  m_RootGameObject: {fileID: 1646711980093566}
   m_IsPrefabAsset: 1
---- !u!1 &1172817762793220
+--- !u!1 &1646711980093566
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4441236727835610}
-  - component: {fileID: 120106859790952906}
-  - component: {fileID: 68801805385835784}
-  - component: {fileID: 114551634935234854}
-  m_Layer: 0
-  m_Name: Line_Purple
+  - component: {fileID: 4747331235553514}
+  - component: {fileID: 120301975211208684}
+  - component: {fileID: 68802455713010448}
+  - component: {fileID: 114190982065588392}
+  m_Layer: 8
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4441236727835610
+--- !u!4 &4747331235553514
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1172817762793220}
+  m_GameObject: {fileID: 1646711980093566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &68801805385835784
+--- !u!68 &68802455713010448
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1172817762793220}
+  m_GameObject: {fileID: 1646711980093566}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -55,38 +55,36 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.011102974, y: 2.525437}
-  - {x: 1.0911031, y: 2.525437}
---- !u!114 &114551634935234854
+  m_EdgeRadius: 0.08
+  m_Points: []
+--- !u!114 &114190982065588392
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1172817762793220}
+  m_GameObject: {fileID: 1646711980093566}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d4f8b7f7db814978b7b377acaf9178a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.25
---- !u!120 &120106859790952906
+  threshold: 0.2
+--- !u!120 &120301975211208684
 LineRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1172817762793220}
+  m_GameObject: {fileID: 1646711980093566}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
+  m_MotionVectors: 2
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2d89cbd7ad2758249837f507e7ca1a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,8 +125,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.909804, g: 0.7058824, b: 0.7372549, a: 1}
-      key1: {r: 0.909804, g: 0.7058824, b: 0.7372549, a: 1}
+      key0: {r: 0.23529413, g: 0.54901963, b: 0.7686275, a: 1}
+      key1: {r: 0.23529413, g: 0.54901963, b: 0.7686275, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -154,10 +152,10 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 62
+    numCornerVertices: 90
+    numCapVertices: 90
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
