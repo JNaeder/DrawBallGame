@@ -38,8 +38,15 @@ public class LevelManager : MonoBehaviour
 
 	public void LoadScene(int sceneNum)
 	{
-		SceneManager.LoadScene(sceneNum);
+		
 		Time.timeScale = 1;
+		if (pauseScreen != null)
+		{
+			pauseScreen.SetActive(false);
+			gameOver.SetActive(false);
+			winScreen.SetActive(false);
+		}
+		SceneManager.LoadScene(sceneNum);
 	}
 
     public void ResetBall() {
@@ -96,6 +103,12 @@ public class LevelManager : MonoBehaviour
 
 		gravityMult = newG;
 		gravityNum.text = newG.ToString("F2");
+
+	}
+
+	public void GoToNextLevel(){
+		int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+		SceneManager.LoadScene(nextScene);
 
 	}
 

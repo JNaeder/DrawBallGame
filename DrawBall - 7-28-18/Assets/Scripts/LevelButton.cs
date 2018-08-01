@@ -8,7 +8,7 @@ public class LevelButton : MonoBehaviour {
 
     Button button;
 
-    public TextMeshProUGUI[] levelInfo; 
+	public TextMeshProUGUI levelText;
 
 
 	// Use this for initialization
@@ -16,14 +16,13 @@ public class LevelButton : MonoBehaviour {
         button = GetComponent<Button>();
 
 
-        if (!button.IsInteractable()) {
-            foreach (TextMeshProUGUI t in levelInfo) {
-                t.gameObject.SetActive(false);
+		//levelText.gameObject.SetActive(false);      
 
-            }
+	}
 
-        }
 
+	public void SetLevelNumber(int num){
+		levelText.text = num.ToString();
 
 	}
 	
@@ -32,14 +31,5 @@ public class LevelButton : MonoBehaviour {
 		
 	}
 
-    public void HideText()
-    {
-        foreach (TextMeshProUGUI t in levelInfo)
-        {
-            t.gameObject.SetActive(false);
-
-        }
-
-
-    } 
+    
 }

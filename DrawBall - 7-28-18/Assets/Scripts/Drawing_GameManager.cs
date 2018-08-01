@@ -71,38 +71,39 @@ public class Drawing_GameManager : MonoBehaviour {
 	void Update () {
         SetGravity();
         CheckWin();
-        SetLineLeftBar();
-
-        scoreNum.text = score.ToString();
-        WinScore.text = score.ToString();
-        timeNum.text = timeScore.ToString("F2");
-        winTimeScore.text = finalTimeScore.ToString("F2");
-        highscoreNum.text = hSM.GetHighScoreForLevel().ToString("F2");
-
-
-        if (hasStarted) {
-			if (!hasWon)
-			{
-				timeScore = Time.time - newTime;
-			}
-            
-        }
-
-        //DrawLineWithFinger();
+        SetLineLeftBar();      
+		UpdateUIStuff();      
+		TimeManager();
 
         if (isDrawing)
         {
             DrawLineWithMouse();
         }
-        else if (isErasing)
+
+	}
+
+
+
+
+	void TimeManager(){
+		if (hasStarted)
         {
-            
+            if (!hasWon)
+            {
+                timeScore = Time.time - newTime;
+            }
 
         }
-        else {
+
+	}
 
 
-        }
+	void UpdateUIStuff(){
+		scoreNum.text = score.ToString();
+        WinScore.text = score.ToString();
+        timeNum.text = timeScore.ToString("F2");
+        winTimeScore.text = finalTimeScore.ToString("F2");
+        highscoreNum.text = hSM.GetHighScoreForLevel().ToString("F2");
 
 	}
 
@@ -215,6 +216,8 @@ public class Drawing_GameManager : MonoBehaviour {
         ballRB.velocity = Vector2.zero;
         ballRB.angularVelocity = 0;
         hasStarted = false;
+		hasWon = false;
+		timeScore = 0;
 
         for (int i = 0; i < drawCoins.Length; i++) {
             drawCoins[i].gameObject.SetActive(true);
@@ -231,6 +234,17 @@ public class Drawing_GameManager : MonoBehaviour {
         ball.transform.position = startingBallPos;
 
     }
+
+	public void ClearLines()
+	{
+		Line[] allLines = FindObjectsOfType<Line>();
+		foreach (Line l in allLines)
+		{
+			Destroy(l.gameObject);
+
+		}
+		maxLineLength = startingLineLength;
+	}
 
 
 

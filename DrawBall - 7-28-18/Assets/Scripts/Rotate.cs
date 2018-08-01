@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour {
 
-    public Vector3 rotateVector;
+	public Transform thingToRotate;
+	public bool spinningLeft;
     public float speed;
 
 	// Use this for initialization
@@ -14,7 +15,13 @@ public class Rotate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(rotateVector * Time.deltaTime * speed);
+		if (spinningLeft)
+		{
+			thingToRotate.Rotate(new Vector3(0, 0, 1) * speed * Time.deltaTime);
+		} else {
+
+			thingToRotate.Rotate(new Vector3(0, 0, -1) * speed * Time.deltaTime);
+		}
 		
 	}
 }
