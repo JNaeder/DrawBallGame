@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: svgImporterSettings
   m_EditorClassIdentifier: 
   defaultSVGFormat: 1
-  defaultUseGradients: 1
-  defaultAntialiasing: 1
+  defaultUseGradients: 0
+  defaultAntialiasing: 0
   defaultAntialiasingWidth: 2
   defaultMeshCompression: 0
   defaultVerticesPerMeter: 1000
@@ -23,7 +23,7 @@ MonoBehaviour:
   defaultCustomPivotPoint: 0
   defaultPivotPoint: {x: 0.5, y: 0.5}
   defaultGenerateCollider: 0
-  defaultKeepSVGFile: 0
+  defaultKeepSVGFile: 1
   defaultUseLayers: 0
   defaultIgnoreSVGCanvas: 1
   defaultOptimizeMesh: 1

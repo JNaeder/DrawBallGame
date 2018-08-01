@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using SVGImporter;
 
 public class Drawing_GameManager : MonoBehaviour {
 
@@ -35,7 +36,7 @@ public class Drawing_GameManager : MonoBehaviour {
 
 
     public float maxLineLength;
-    public Image lineLeftImageBar;
+    public SVGImage lineLeftImageBar;
     float lineLeftPerc, startingLineLength;
     Vector3 lineLeftImageBarScale;
 

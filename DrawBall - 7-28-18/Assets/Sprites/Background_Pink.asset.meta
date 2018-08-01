@@ -1,0 +1,95 @@
+fileFormatVersion: 2
+guid: 19e285cd09299444eb93842fe0413844
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!-- Generator: Adobe Illustrator
+    19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\r\n<svg version=\"1.1\"
+    xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"
+    x=\"0px\" y=\"0px\"\r\n\t viewBox=\"0 0 750 1334\" style=\"enable-background:new
+    0 0 750 1334;\" xml:space=\"preserve\">\r\n<style type=\"text/css\">\r\n\t.st0{fill:#3A3238;}\r\n\t.st1{display:none;}\r\n\t.st2{display:inline;}\r\n\t.st3{fill:#D282A6;}\r\n\t.st4{fill:#E8B4BC;}\r\n\t.st5{fill:#F5E3E0;}\r\n\t.st6{display:inline;fill:#D282A6;}\r\n\t.st7{display:inline;fill:#6E4555;}\r\n\t.st8{fill:#6E4555;}\r\n\t.st9{fill:none;stroke:#F5E3E0;stroke-width:11;stroke-miterlimit:10;}\r\n\t.st10{fill:#36222A;}\r\n\t.st11{fill:none;stroke:#6E4555;stroke-width:7;stroke-miterlimit:10;}\r\n\t.st12{fill:#A3A3A3;}\r\n\t.st13{fill:#3F3F3F;}\r\n\t.st14{fill:#787878;}\r\n</style>\r\n<g
+    id=\"Background\">\r\n\t<path id=\"XMLID_66_\" class=\"st0\" d=\"M0,0v1334h750V0H0z
+    M726,1228c0,11-9,20-20,20H43c-11,0-20-9-20-20V180c0-11,9-20,20-20h663\r\n\t\tc11,0,20,9,20,20V1228z\"/>\r\n</g>\r\n<g
+    id=\"DrawCoins\" class=\"st1\">\r\n\t<g id=\"DrawCoin\" class=\"st2\">\r\n\t\t<circle
+    id=\"XMLID_13_\" class=\"st3\" cx=\"248.8\" cy=\"791.7\" r=\"25.2\"/>\r\n\t\t<circle
+    id=\"XMLID_15_\" class=\"st4\" cx=\"248.5\" cy=\"791.7\" r=\"19.4\"/>\r\n\t\t<path
+    id=\"XMLID_18_\" class=\"st5\" d=\"M245.6,778.5c0,0,18.4,2.8,17.1,11.2c-1.3,8.3,3.1,2.1,3.1,2.1s0.7-12.2-8.5-14.4\r\n\t\t\tC248,775.2,243.4,774.1,245.6,778.5z\"/>\r\n\t</g>\r\n\t<g
+    id=\"DrawCoin_copy\" class=\"st2\">\r\n\t\t<circle id=\"XMLID_23_\" class=\"st3\"
+    cx=\"399.8\" cy=\"970.7\" r=\"25.2\"/>\r\n\t\t<circle id=\"XMLID_21_\" class=\"st4\"
+    cx=\"399.5\" cy=\"970.7\" r=\"19.4\"/>\r\n\t\t<path id=\"XMLID_20_\" class=\"st5\"
+    d=\"M396.6,957.5c0,0,18.4,2.8,17.1,11.2c-1.3,8.3,3.1,2.1,3.1,2.1s0.7-12.2-8.5-14.4\r\n\t\t\tC399,954.2,394.4,953.1,396.6,957.5z\"/>\r\n\t</g>\r\n\t<g
+    id=\"DrawCoin_copy_2\" class=\"st2\">\r\n\t\t<circle id=\"XMLID_31_\" class=\"st3\"
+    cx=\"585.8\" cy=\"1106.7\" r=\"25.2\"/>\r\n\t\t<circle id=\"XMLID_29_\" class=\"st4\"
+    cx=\"585.5\" cy=\"1106.7\" r=\"19.4\"/>\r\n\t\t<path id=\"XMLID_24_\" class=\"st5\"
+    d=\"M582.6,1093.5c0,0,18.4,2.8,17.1,11.2c-1.3,8.3,3.1,2.1,3.1,2.1s0.7-12.2-8.5-14.4\r\n\t\t\tC585,1090.2,580.4,1089.1,582.6,1093.5z\"/>\r\n\t</g>\r\n</g>\r\n<g
+    id=\"LineLeftIndicator\" class=\"st1\">\r\n\t<path id=\"XMLID_14_\" class=\"st6\"
+    d=\"M726,1289v10c0,6.6-5.4,12-12,12H35c-6.6,0-12-5.4-12-12v-10c0-6.6,5.4-12,12-12h679\r\n\t\tC720.6,1277,726,1282.4,726,1289z\"/>\r\n\t<rect
+    id=\"XMLID_16_\" x=\"94\" y=\"1277\" class=\"st7\" width=\"48\" height=\"34\"/>\r\n\t<rect
+    id=\"XMLID_10_\" x=\"264\" y=\"1277\" class=\"st7\" width=\"48\" height=\"34\"/>\r\n\t<rect
+    id=\"XMLID_17_\" x=\"434\" y=\"1277\" class=\"st7\" width=\"48\" height=\"34\"/>\r\n\t<rect
+    id=\"XMLID_9_\" x=\"604\" y=\"1277\" class=\"st7\" width=\"48\" height=\"34\"/>\r\n</g>\r\n<g
+    id=\"Menu\" class=\"st1\">\r\n\t<g id=\"Pause_Button_copy_2\" class=\"st2\">\r\n\t\t<path
+    id=\"XMLID_22_\" class=\"st8\" d=\"M497.3,145.5h-69.6c-6.6,0-12-5.4-12-12v-36c0-6.6,5.4-12,12-12h69.6c6.6,0,12,5.4,12,12v36\r\n\t\t\tC509.3,140.1,503.9,145.5,497.3,145.5z\"/>\r\n\t</g>\r\n\t<g
+    id=\"Clear_copy\" class=\"st2\">\r\n\t\t<path id=\"XMLID_34_\" class=\"st8\" d=\"M606.7,145.5h-69.6c-6.6,0-12-5.4-12-12v-36c0-6.6,5.4-12,12-12h69.6c6.6,0,12,5.4,12,12v36\r\n\t\t\tC618.7,140.1,613.3,145.5,606.7,145.5z\"/>\r\n\t</g>\r\n\t<g
+    id=\"Reset_copy\" class=\"st2\">\r\n\t\t<path id=\"XMLID_26_\" class=\"st8\" d=\"M712.6,145.5H643c-6.6,0-12-5.4-12-12v-36c0-6.6,5.4-12,12-12h69.6c6.6,0,12,5.4,12,12v36\r\n\t\t\tC724.6,140.1,719.2,145.5,712.6,145.5z\"/>\r\n\t</g>\r\n\t<g
+    id=\"Pause_Button_copy\" class=\"st2\">\r\n\t\t<path id=\"XMLID_12_\" class=\"st8\"
+    d=\"M497.3,72.5h-69.6c-6.6,0-12-5.4-12-12v-36c0-6.6,5.4-12,12-12h69.6c6.6,0,12,5.4,12,12v36\r\n\t\t\tC509.3,67.1,503.9,72.5,497.3,72.5z\"/>\r\n\t\t<g
+    id=\"XMLID_4_\">\r\n\t\t\t<rect id=\"XMLID_11_\" x=\"439.5\" y=\"20.9\" class=\"st5\"
+    width=\"17.3\" height=\"42.8\"/>\r\n\t\t\t<rect id=\"XMLID_8_\" x=\"468\" y=\"20.9\"
+    class=\"st5\" width=\"17.3\" height=\"42.8\"/>\r\n\t\t</g>\r\n\t</g>\r\n\t<g id=\"Clear\"
+    class=\"st2\">\r\n\t\t<path id=\"XMLID_28_\" class=\"st8\" d=\"M605.7,72.5h-69.6c-6.6,0-12-5.4-12-12v-36c0-6.6,5.4-12,12-12h69.6c6.6,0,12,5.4,12,12v36\r\n\t\t\tC617.7,67.1,612.3,72.5,605.7,72.5z\"/>\r\n\t\t<path
+    id=\"XMLID_27_\" class=\"st9\" d=\"M573.7,28.8c9.9,4.3,14.5,15.9,10.2,25.8c-3.4,8-12.7,11.6-20.6,8.2\r\n\t\t\tc-6.4-2.8-9.3-10.2-6.5-16.5\"/>\r\n\t\t<polygon
+    id=\"XMLID_25_\" class=\"st5\" points=\"558.8,23.3 577.3,20.5 570.4,37.9 \t\t\"/>\r\n\t</g>\r\n\t<g
+    id=\"Reset\" class=\"st2\">\r\n\t\t<path id=\"XMLID_46_\" class=\"st10\" d=\"M719.1,76.8h-69.6c-6.6,0-12-5.4-12-12V24.5c0-6.6,5.4-12,12-12h69.6c6.6,0,12,5.4,12,12\r\n\t\t\tv40.3C731.1,71.3,725.7,76.8,719.1,76.8z\"/>\r\n\t\t<path
+    id=\"XMLID_19_\" class=\"st8\" d=\"M713.6,72.5H644c-6.6,0-12-5.4-12-12v-36c0-6.6,5.4-12,12-12h69.6c6.6,0,12,5.4,12,12v36\r\n\t\t\tC725.6,67.1,720.2,72.5,713.6,72.5z\"/>\r\n\t\t<path
+    id=\"XMLID_7_\" class=\"st5\" d=\"M712,58.4h-51.6c-0.1,0-0.2,0-0.3-0.1c-1.4-1.3-17.4-13.4-21.2-15.5c-0.3-0.2-0.3-0.6,0-0.8\r\n\t\t\tl21.2-15.3c0.1-0.1,0.2-0.1,0.3-0.1H712c1.8,0,3.3,1.6,3.3,3.5v24.8C715.3,56.8,713.8,58.4,712,58.4z\"/>\r\n\t\t<line
+    id=\"XMLID_6_\" class=\"st11\" x1=\"671.1\" y1=\"30.6\" x2=\"695.5\" y2=\"55\"/>\r\n\t\t<line
+    id=\"XMLID_5_\" class=\"st11\" x1=\"696.5\" y1=\"30.6\" x2=\"672.1\" y2=\"55\"/>\r\n\t</g>\r\n</g>\r\n<g
+    id=\"Main_Ball\" class=\"st1\">\r\n\t<g id=\"XMLID_3_\" class=\"st2\">\r\n\t\t<path
+    id=\"XMLID_53_\" class=\"st12\" d=\"M371.2,424.2c0,3.7,1.1,7.3,0.4,10.8c-0.7,3.6-0.6,7.5-2,10.8c-1.4,3.4-5.1,5.5-7.1,8.5\r\n\t\t\tc-2,3-2.9,7-5.4,9.5c-2.6,2.6-4.6,6.3-7.6,8.3c-3,2-7.4,1.9-10.8,3.3c-3.3,1.4-6.2,5.2-9.8,5.9c-3.5,0.7-7.6-0.8-11.3-0.8\r\n\t\t\tc-3.7,0-6.9-3.2-10.4-3.9c-3.6-0.7-6.3-2.6-9.6-4c-3.4-1.4-7.7-0.3-10.7-2.3c-3-2-7.8-2.4-10.3-4.9c-2.6-2.6-0.5-8.9-2.5-11.9\r\n\t\t\tc-2-3-8.9-3.4-10.3-6.8c-1.4-3.3,3.2-8.5,2.5-12.1c-0.7-3.5-3.1-6.5-3.1-10.2c0-3.7,2.3-6.8,3-10.3c0.7-3.6,0.9-6.8,2.3-10.2\r\n\t\t\tc1.4-3.4,0.8-7.7,2.8-10.7c2-3,3.2-7.1,5.7-9.7c2.6-2.6,5.6-5.4,8.6-7.4c3-2,8-0.6,11.4-2c3.3-1.4,5.9-5.9,9.5-6.6\r\n\t\t\tc3.5-0.7,7.6,3.7,11.3,3.7c3.7,0,7.5-3,11-2.3c3.6,0.7,8,0.1,11.3,1.5c3.4,1.4,5.8,5.3,8.8,7.3c3,2,3.4,7,5.9,9.6\r\n\t\t\tc2.6,2.6,9.2,1.8,11.3,4.8c2,3,0.6,8.1,2,11.5c1.4,3.3,0.1,7.1,0.8,10.7C369.4,417.5,371.2,420.5,371.2,424.2z\"/>\r\n\t</g>\r\n\t<g
+    id=\"XMLID_40_\" class=\"st2\">\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_30_\" transform=\"matrix(0.7853
+    -0.6192 0.6192 0.7853 -172.9827 271.722)\" class=\"st13\" cx=\"305.3\" cy=\"385.3\"
+    rx=\"8.3\" ry=\"7.3\"/>\r\n\t\t<ellipse id=\"XMLID_32_\" class=\"st13\" cx=\"349.3\"
+    cy=\"410.2\" rx=\"7.3\" ry=\"9\"/>\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_41_\"
+    transform=\"matrix(0.9792 -0.203 0.203 0.9792 -76.3697 70.4766)\" class=\"st13\"
+    cx=\"305.5\" cy=\"407.6\" rx=\"3.4\" ry=\"4.2\"/>\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_45_\"
+    transform=\"matrix(0.9792 -0.203 0.203 0.9792 -85.8461 72.0636)\" class=\"st13\"
+    cx=\"308.5\" cy=\"454.6\" rx=\"3.4\" ry=\"4.2\"/>\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_44_\"
+    transform=\"matrix(0.9792 -0.203 0.203 0.9792 -75.1417 74.4524)\" class=\"st13\"
+    cx=\"325.5\" cy=\"403.6\" rx=\"3.4\" ry=\"4.2\"/>\r\n\t\t<ellipse id=\"XMLID_33_\"
+    class=\"st13\" cx=\"333.3\" cy=\"385.3\" rx=\"4.8\" ry=\"5.8\"/>\r\n\t\t<ellipse
+    id=\"XMLID_35_\" class=\"st13\" cx=\"318.9\" cy=\"427.8\" rx=\"8.6\" ry=\"9.8\"/>\r\n\t\t<ellipse
+    id=\"XMLID_36_\" class=\"st13\" cx=\"291.3\" cy=\"438\" rx=\"8.8\" ry=\"9\"/>\r\n\t\t<ellipse
+    id=\"XMLID_37_\" class=\"st13\" cx=\"325.5\" cy=\"463.1\" rx=\"8\" ry=\"9.4\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_38_\" transform=\"matrix(-0.8367 0.5477 -0.5477 -0.8367 884.9426 628.6319)\"
+    class=\"st13\" cx=\"348.8\" cy=\"446.3\" rx=\"10.8\" ry=\"6.8\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_39_\" transform=\"matrix(0.6422 -0.7666 0.7666 0.6422 -203.7368 414.0401)\"
+    class=\"st13\" cx=\"341.6\" cy=\"425.3\" rx=\"2.6\" ry=\"1.8\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_42_\" transform=\"matrix(0.6422 -0.7666 0.7666 0.6422 -207.2686 362.4742)\"
+    class=\"st13\" cx=\"284.6\" cy=\"403.3\" rx=\"2.6\" ry=\"1.8\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_43_\" transform=\"matrix(-0.9344 0.3561 -0.3561 -0.9344 686.6338 717.7567)\"
+    class=\"st13\" cx=\"277.3\" cy=\"422.1\" rx=\"3.3\" ry=\"3.1\"/>\r\n\t</g>\r\n\t<g
+    id=\"XMLID_47_\" class=\"st2\">\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_62_\" transform=\"matrix(0.7853
+    -0.6192 0.6192 0.7853 -174.4107 273.6045)\" class=\"st14\" cx=\"307.3\" cy=\"388.3\"
+    rx=\"8.3\" ry=\"7.3\"/>\r\n\t\t<ellipse id=\"XMLID_61_\" class=\"st14\" cx=\"351.3\"
+    cy=\"413.2\" rx=\"7.3\" ry=\"9\"/>\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_60_\"
+    transform=\"matrix(0.9792 -0.203 0.203 0.9792 -76.937 70.945)\" class=\"st14\"
+    cx=\"307.5\" cy=\"410.6\" rx=\"3.4\" ry=\"4.2\"/>\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_59_\"
+    transform=\"matrix(0.9792 -0.203 0.203 0.9792 -86.4133 72.5319)\" class=\"st14\"
+    cx=\"310.5\" cy=\"457.6\" rx=\"3.4\" ry=\"4.2\"/>\r\n\t\t\r\n\t\t\t<ellipse id=\"XMLID_58_\"
+    transform=\"matrix(0.9792 -0.203 0.203 0.9792 -75.7089 74.9208)\" class=\"st14\"
+    cx=\"327.5\" cy=\"406.6\" rx=\"3.4\" ry=\"4.2\"/>\r\n\t\t<ellipse id=\"XMLID_57_\"
+    class=\"st14\" cx=\"335.3\" cy=\"388.3\" rx=\"4.8\" ry=\"5.8\"/>\r\n\t\t<ellipse
+    id=\"XMLID_56_\" class=\"st14\" cx=\"320.9\" cy=\"430.8\" rx=\"8.6\" ry=\"9.8\"/>\r\n\t\t<ellipse
+    id=\"XMLID_55_\" class=\"st14\" cx=\"293.3\" cy=\"441\" rx=\"8.8\" ry=\"9\"/>\r\n\t\t<ellipse
+    id=\"XMLID_54_\" class=\"st14\" cx=\"327.5\" cy=\"466.1\" rx=\"8\" ry=\"9.4\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_52_\" transform=\"matrix(-0.8367 0.5477 -0.5477 -0.8367 890.2589 633.0467)\"
+    class=\"st14\" cx=\"350.8\" cy=\"449.3\" rx=\"10.8\" ry=\"6.8\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_50_\" transform=\"matrix(0.6422 -0.7666 0.7666 0.6422 -205.3209 416.6467)\"
+    class=\"st14\" cx=\"343.6\" cy=\"428.3\" rx=\"2.6\" ry=\"1.8\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_49_\" transform=\"matrix(0.6422 -0.7666 0.7666 0.6422 -208.8526 365.0807)\"
+    class=\"st14\" cx=\"286.6\" cy=\"406.3\" rx=\"2.6\" ry=\"1.8\"/>\r\n\t\t\r\n\t\t\t<ellipse
+    id=\"XMLID_48_\" transform=\"matrix(-0.9344 0.3561 -0.3561 -0.9344 691.571 722.8478)\"
+    class=\"st14\" cx=\"279.3\" cy=\"425.1\" rx=\"3.3\" ry=\"3.1\"/>\r\n\t</g>\r\n</g>\r\n</svg>\r\n"
+  assetBundleName: 
+  assetBundleVariant: 
