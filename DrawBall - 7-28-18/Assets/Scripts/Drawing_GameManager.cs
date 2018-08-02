@@ -7,6 +7,10 @@ using SVGImporter;
 
 public class Drawing_GameManager : MonoBehaviour {
 
+
+	public static GameObject currentPlayerBall;
+	public GameObject defaultPlayerBall;
+
 	public GameObject line;
     public Color lineColor = Color.white;
 	
@@ -19,6 +23,8 @@ public class Drawing_GameManager : MonoBehaviour {
 
     bool hasStarted, hasWon;
     public bool isDrawing, isErasing;
+
+	public Transform ballStartingPosition;
 
     DrawCoin[] drawCoins;
 
@@ -44,6 +50,15 @@ public class Drawing_GameManager : MonoBehaviour {
 
     private void Awake()
     {
+		if (currentPlayerBall == null)
+		{
+			Instantiate(defaultPlayerBall, ballStartingPosition.position, Quaternion.identity);
+		}
+		else
+		{
+			Instantiate(currentPlayerBall, ballStartingPosition.position, Quaternion.identity);
+		}
+
         ball = FindObjectOfType<Ball>().gameObject;
     }
 
@@ -161,20 +176,33 @@ public class Drawing_GameManager : MonoBehaviour {
 
     void CheckWin() {
         if (currentCoinNum <= 0) {
-            lM.WinScreen();
-            hasWon = true;
-			finalTimeScore = timeScore;
-			if (finalTimeScore < hSM.GetHighScoreForLevel())
-            {
-				hSM.SetNewHighScore(finalTimeScore);
+			if (!hasWon)
+			{
+				lM.WinScreen();
+				finalTimeScore = timeScore;
+				SetMoneyNumber();
+				if (finalTimeScore < hSM.GetHighScoreForLevel())
+				{
+					hSM.SetNewHighScore(finalTimeScore);
+				}
 
-            }
+
+				hasWon = true;
+			}
             
         }
         
 
         
     }
+
+
+	void SetMoneyNumber(){
+
+		ShopManager.moneyNum += 5;
+		PlayerPrefs.SetInt("Money", ShopManager.moneyNum);
+
+	}
 
 
     void SetGravity() {

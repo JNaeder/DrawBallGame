@@ -20,7 +20,6 @@ public class LevelButtonManager : MonoBehaviour {
 	public void SetNumbersForButtons(){
 		for (int i = 0; i < levelButtons.Length; i++){
 			levelButtons[i].SetLevelNumber(i + 1);
-			Debug.Log(PlayerPrefs.GetFloat("Level_" + i + 1));
 			 
 		}
 

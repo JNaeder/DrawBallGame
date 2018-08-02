@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35648741dd5b14baa82bec08abfe7457, type: 3}
   m_Name: MainMenuButtonUI_1
   m_EditorClassIdentifier: 
-  _lastTimeModified: 636687356704030990
+  _lastTimeModified: 636688299450322870
   _documentAsset: {fileID: 114436807929933560}
-  _sharedMesh: {fileID: 43820034193790844}
+  _sharedMesh: {fileID: 43042322178671664}
   _antialiasing: 1
   _generateCollider: 0
   _keepSVGFile: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
     height: 1
   _useLayers: 0
   _layers: []
---- !u!43 &43820034193790844
+--- !u!43 &43042322178671664
 Mesh:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

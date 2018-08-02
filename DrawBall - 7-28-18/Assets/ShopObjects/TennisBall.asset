@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbae4c3219e2d41ddba4db3bf180f08e, type: 3}
+  m_Name: TennisBall
+  m_EditorClassIdentifier: 
+  objectImage: {fileID: 11400000, guid: 531c2dc9d48454905a32c69e1eadface, type: 2}
+  objectName: TennisBall
+  price: 15
+  playerBall: {fileID: 1546408578700190, guid: ad02563a55e144620824bb543f0c3fc0, type: 2}

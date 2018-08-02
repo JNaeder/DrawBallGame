@@ -103,7 +103,7 @@ public class EndlessMode : MonoBehaviour {
 		for (int i = 0; i < num; i++)
         {
             int randNum = Random.Range(0, drawCoinPositions.Length);
-			GameObject newCoin = Instantiate(obstacle, drawCoinPositions[randNum].position, Quaternion.identity);
+			Instantiate(obstacle, drawCoinPositions[randNum].position, Quaternion.identity);
 
             newPos.Remove(drawCoinPositions[randNum]);
             drawCoinPositions = newPos.ToArray();

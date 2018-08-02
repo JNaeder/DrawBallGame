@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbae4c3219e2d41ddba4db3bf180f08e, type: 3}
+  m_Name: Marble
+  m_EditorClassIdentifier: 
+  objectImage: {fileID: 11400000, guid: 3b027e687d0d946c5b877bfa1af03f15, type: 2}
+  objectName: Marble
+  price: 30
+  playerBall: {fileID: 1237157602722750, guid: 18949d4f90d4342609062a811266bed6, type: 2}

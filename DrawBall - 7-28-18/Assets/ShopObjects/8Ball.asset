@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbae4c3219e2d41ddba4db3bf180f08e, type: 3}
+  m_Name: 8Ball
+  m_EditorClassIdentifier: 
+  objectImage: {fileID: 11400000, guid: 39a64de51067740f0bfd2d4d87bc3909, type: 2}
+  objectName: 8Ball
+  price: 10
+  playerBall: {fileID: 1942007431942660, guid: 1369f232a51564d91b628e2103fd4127, type: 2}
