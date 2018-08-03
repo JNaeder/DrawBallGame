@@ -16,7 +16,7 @@ MonoBehaviour:
   defaultAntialiasing: 1
   defaultAntialiasingWidth: 2
   defaultMeshCompression: 0
-  defaultVerticesPerMeter: 1000
+  defaultVerticesPerMeter: 10000
   defaultScale: 0.01
   defaultDepthOffset: 0.01
   defaultCompressDepth: 1

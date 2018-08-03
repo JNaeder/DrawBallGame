@@ -14,14 +14,17 @@ public class ShopButton : MonoBehaviour {
 	public bool isUnlocked;
 
 	SVGImage buttonImage;
-	Color startColor;
+    [HideInInspector]
+	public Color startColor;
 
+    private void Awake()
+    {
+        buttonImage = GetComponent<SVGImage>();
+        startColor = buttonImage.color;
+    }
 
-
-	// Use this for initialization
-	void Start () {
-		buttonImage = GetComponent<SVGImage>();
-		startColor = buttonImage.color;
+    // Use this for initialization
+    void Start () {
 
 
 		if (item != null)
@@ -45,13 +48,18 @@ public class ShopButton : MonoBehaviour {
 
 
 
-		if(isUnlocked ==  false){
-			// Locked it
-			Color lockedColor = new Color(1, 1, 1, .25f);
-			itemImage.color = lockedColor;
-			buttonImage.color = lockedColor;
+        if (isUnlocked == false)
+        {
+            // Locked it
+            Color lockedColor = new Color(1, 1, 1, .25f);
+            itemImage.color = lockedColor;
+            buttonImage.color = lockedColor;
 
-		}
+        }
+        else {
+            itemPrice.text = " ";
+
+        }
 		
 	}
 	
@@ -68,9 +76,9 @@ public class ShopButton : MonoBehaviour {
 				isUnlocked = true;
 				PlayerPrefs.SetInt(item.objectName, 1);
 				itemImage.color = Color.white;
-				buttonImage.color = startColor;
-
-			}
+				buttonImage.color = Color.yellow;
+                itemPrice.text = " ";
+            }
 			else
 			{
 				Debug.Log("Not Enough Money");
@@ -78,11 +86,27 @@ public class ShopButton : MonoBehaviour {
 		} else {
 
 			Drawing_GameManager.currentPlayerBall = item.playerBall;
-
+            buttonImage.color = Color.yellow;
 		}
 
 
 	}
+
+
+    public void SetButtonColor() {
+        if (Drawing_GameManager.currentPlayerBall == item.playerBall)
+        {
+            buttonImage.color = Color.yellow;
+        }
+        else {
+            if (isUnlocked)
+            {
+                buttonImage.color = startColor;
+            }
+        }
+        
+
+    }
 
 
 	public void GetLocked()
