@@ -52,16 +52,7 @@ public class Drawing_GameManager : MonoBehaviour {
 
     private void Awake()
     {
-		allPlayerBalls = Resources.LoadAll<GameObject>("PlayerBalls");
-
-
-		foreach(GameObject g in allPlayerBalls){
-			string savedPlayerBall = PlayerPrefs.GetString("CurrentPlayerBall");
-			if(g.name == savedPlayerBall){
-				currentPlayerBall = g;
-
-			}
-		}
+		SetCurrentPlayerBall();
 
 
 		if (currentPlayerBall == null)
@@ -81,16 +72,15 @@ public class Drawing_GameManager : MonoBehaviour {
     void Start () {
         lM = FindObjectOfType<LevelManager>();
         hSM = FindObjectOfType<HighScoreManager>();
-        
 		ballRB = ball.GetComponent<Rigidbody2D>();
         drawCoins = FindObjectsOfType<DrawCoin>();
-        startingCoinNum = drawCoins.Length;
+
+		isDrawing = true;
+
+        //Setting Start Values
+		startingCoinNum = drawCoins.Length;
         currentCoinNum = startingCoinNum;
-
-		//gravityMult = LevelManager.gravityMult;
-
-        startingBallPos = ball.transform.position;
-
+        startingBallPos = ball.transform.position;      
         startingLineLength = maxLineLength;
         
 	}
@@ -122,6 +112,23 @@ public class Drawing_GameManager : MonoBehaviour {
                 timeScore = Time.time - newTime;
             }
 
+        }
+
+	}
+
+
+	void SetCurrentPlayerBall(){
+		allPlayerBalls = Resources.LoadAll<GameObject>("PlayerBalls");
+
+
+        foreach (GameObject g in allPlayerBalls)
+        {
+            string savedPlayerBall = PlayerPrefs.GetString("CurrentPlayerBall");
+            if (g.name == savedPlayerBall)
+            {
+                currentPlayerBall = g;
+
+            }
         }
 
 	}
