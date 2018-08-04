@@ -11,6 +11,8 @@ public class Drawing_GameManager : MonoBehaviour {
 	public static GameObject currentPlayerBall;
 	public GameObject defaultPlayerBall;
 
+	GameObject[] allPlayerBalls;
+
 	public GameObject line;
     public Color lineColor = Color.white;
 	
@@ -50,6 +52,18 @@ public class Drawing_GameManager : MonoBehaviour {
 
     private void Awake()
     {
+		allPlayerBalls = Resources.LoadAll<GameObject>("PlayerBalls");
+
+
+		foreach(GameObject g in allPlayerBalls){
+			string savedPlayerBall = PlayerPrefs.GetString("CurrentPlayerBall");
+			if(g.name == savedPlayerBall){
+				currentPlayerBall = g;
+
+			}
+		}
+
+
 		if (currentPlayerBall == null)
 		{
 			Instantiate(defaultPlayerBall, ballStartingPosition.position, Quaternion.identity);

@@ -6,13 +6,26 @@ using UnityEngine.UI;
 using SVGImporter;
 
 public class ShopLayoutManager : MonoBehaviour {
-
+	GameObject[] allPlayerBalls;
 
 	public List<ShopItem> shopItems;
 	ShopButton[] allButtons;
 
 	// Use this for initialization
 	void Start () {
+		allPlayerBalls = Resources.LoadAll<GameObject>("PlayerBalls");      
+        foreach (GameObject g in allPlayerBalls)
+        {
+            string savedPlayerBall = PlayerPrefs.GetString("CurrentPlayerBall");
+            if (g.name == savedPlayerBall)
+            {
+				Drawing_GameManager.currentPlayerBall = g;
+
+            }
+        }
+
+
+
 		allButtons = GetComponentsInChildren<ShopButton>();
         
 

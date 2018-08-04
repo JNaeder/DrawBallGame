@@ -72,7 +72,11 @@ public class ShopButton : MonoBehaviour {
 			{
 				ShopManager.moneyNum -= item.price;
 				PlayerPrefs.SetInt("Money", ShopManager.moneyNum);
+
 				Drawing_GameManager.currentPlayerBall = item.playerBall;
+				PlayerPrefs.SetString("CurrentPlayerBall", item.objectName);
+				Debug.Log("SavedPlayerball as " + item.objectName);
+
 				isUnlocked = true;
 				PlayerPrefs.SetInt(item.objectName, 1);
 				itemImage.color = Color.white;
@@ -86,6 +90,8 @@ public class ShopButton : MonoBehaviour {
 		} else {
 
 			Drawing_GameManager.currentPlayerBall = item.playerBall;
+			PlayerPrefs.SetString("CurrentPlayerBall", item.objectName);
+            Debug.Log("SavedPlayerball as " + item.objectName);
             buttonImage.color = Color.yellow;
 		}
 

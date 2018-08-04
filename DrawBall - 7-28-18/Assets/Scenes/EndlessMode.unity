@@ -2503,6 +2503,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultPlayerBall: {fileID: 1002238088620430, guid: 68eb6f648fa44754289ae60ba4f3cf70,
     type: 2}
+  allPlayerBalls:
+  - {fileID: 1942007431942660, guid: 1369f232a51564d91b628e2103fd4127, type: 2}
+  - {fileID: 1858362196548990, guid: 7074514727a9a4cff913c1a590ad70e7, type: 2}
+  - {fileID: 1237157602722750, guid: 18949d4f90d4342609062a811266bed6, type: 2}
+  - {fileID: 1157793586693006, guid: b520303e9a990453f84a29e46979fe6d, type: 2}
+  - {fileID: 1002238088620430, guid: 68eb6f648fa44754289ae60ba4f3cf70, type: 2}
+  - {fileID: 1546408578700190, guid: ad02563a55e144620824bb543f0c3fc0, type: 2}
   line: {fileID: 1646711980093566, guid: 0df3ba413c847496fb8067fa749a9e58, type: 2}
   lineColor: {r: 0.8588236, g: 0.50980395, b: 0.627451, a: 1}
   gravityMult: 10
