@@ -21,7 +21,7 @@ public class Drawing_GameManager : MonoBehaviour {
     public int score;
     public float timeScore, finalTimeScore;
 
-    public TextMeshProUGUI scoreNum, WinScore, timeNum, winTimeScore, highscoreNum ;
+    public TextMeshProUGUI scoreNum, WinScore, timeNum, winTimeScore, highscoreNum, newMoneyNum, totalMoneyNum ;
 
     bool hasStarted, hasWon;
     public bool isDrawing, isErasing;
@@ -220,8 +220,13 @@ public class Drawing_GameManager : MonoBehaviour {
 
 	void SetMoneyNumber(){
 
-		ShopManager.moneyNum += 5;
+
+		int scoreAdditionNum = Mathf.RoundToInt(10 - finalTimeScore);
+		int oldMoneyNum = PlayerPrefs.GetInt("Money");
+		ShopManager.moneyNum = oldMoneyNum + scoreAdditionNum;
 		PlayerPrefs.SetInt("Money", ShopManager.moneyNum);
+		newMoneyNum.text = "+ " + scoreAdditionNum;
+		totalMoneyNum.text = "= " + ShopManager.moneyNum.ToString();
 
 	}
 

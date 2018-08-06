@@ -114,6 +114,17 @@ public class ShopButton : MonoBehaviour {
 
     }
 
+	public void UnlockButton(){
+		Drawing_GameManager.currentPlayerBall = item.playerBall;
+        PlayerPrefs.SetString("CurrentPlayerBall", item.objectName);
+        Debug.Log("SavedPlayerball as " + item.objectName);
+		isUnlocked = true;
+        PlayerPrefs.SetInt(item.objectName, 1);
+        itemImage.color = Color.white;
+        buttonImage.color = Color.yellow;
+        itemPrice.text = " ";
+	}
+
 
 	public void GetLocked()
 	{

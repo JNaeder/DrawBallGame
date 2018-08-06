@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelButtonManager : MonoBehaviour {
     
     
     public LevelButton[] levelButtons;
+	public int startLevelScene;
+
 
 
 	// Use this for initialization
@@ -18,9 +21,12 @@ public class LevelButtonManager : MonoBehaviour {
 
 
 	public void SetNumbersForButtons(){
-		for (int i = 0; i < levelButtons.Length; i++){
+		for (int i = 0; i < levelButtons.Length; i++)
+		{
 			levelButtons[i].SetLevelNumber(i + 1);
-			 
+			levelButtons[i].SetSceneToButton(startLevelScene + i);
+
+			Button newButton = levelButtons[i].GetComponent<Button>();
 		}
 
 	}

@@ -44,8 +44,21 @@ public class ShopManager : MonoBehaviour {
 	public void ResetStore(){
 		allShopButtons = FindObjectsOfType<ShopButton>();
 		foreach(ShopButton s in allShopButtons){
-			s.GetLocked();
+			if (s.item != null)
+			{
+				if (s.item.objectName == "Rock")
+				{
+					s.UnlockButton();
+				}
+				else
+				{
+					s.GetLocked();
+				}
+			}
+
 		}
+
+
 
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LevelButton : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class LevelButton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        button = GetComponent<Button>();
+        
 
 
 		//levelText.gameObject.SetActive(false);      
@@ -25,10 +26,17 @@ public class LevelButton : MonoBehaviour {
 		levelText.text = num.ToString();
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void SetSceneToButton(int i){
+		button = GetComponent<Button>();
+		button.onClick.AddListener(delegate { LoadScene(i); });
+
+	}
+
+
+	void LoadScene(int sceneNum){
+		Debug.Log("Load Scene " + sceneNum);
+		SceneManager.LoadScene(sceneNum);
 	}
 
     

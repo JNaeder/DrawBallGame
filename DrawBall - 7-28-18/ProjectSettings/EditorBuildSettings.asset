@@ -9,27 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e36ce0fe952db19449b475696cccb22d
   - enabled: 1
-    path: Assets/Scenes/Levels/Level_1.unity
-    guid: 195a7b7f232894771ad28c14c740e491
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level_2.unity
-    guid: 73bb373f827394fbcb2060bd13a227e4
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level_3.unity
-    guid: b997007b44a0648f8822717bf5b8d92e
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level_4.unity
-    guid: 43aedbc4709444742812dc0256b88ecd
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level_5.unity
-    guid: 85cf194c15d574499a566984ddd54e3f
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level_6.unity
-    guid: 723ef0feb655b4cf59a4093de7b17e48
+    path: Assets/Scenes/ShopMenu.unity
+    guid: 4ac6c58d34f4b4a6c9a52e7aa234e27c
   - enabled: 1
     path: Assets/Scenes/EndlessMode.unity
     guid: 09ad8d88dfb76494988484d469e8b7e9
   - enabled: 1
-    path: Assets/Scenes/ShopMenu.unity
-    guid: 4ac6c58d34f4b4a6c9a52e7aa234e27c
+    path: Assets/Scenes/Levels/World_1/Level_1-1.unity
+    guid: 195a7b7f232894771ad28c14c740e491
+  - enabled: 1
+    path: Assets/Scenes/Levels/World_1/Level_1-2.unity
+    guid: b1a795526cf924085bc06bc1655e24b6
+  - enabled: 1
+    path: Assets/Scenes/Levels/World_1/Level_1-3.unity
+    guid: 8c084391adf8f45d6939b3aa8e4f513e
+  - enabled: 1
+    path: Assets/Scenes/Levels/World_1/Level_1-4.unity
+    guid: 9909c2b75c3a241429ea18918e110caa
   m_configObjects: {}
