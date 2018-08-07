@@ -8,7 +8,8 @@ using SVGImporter;
 public class ShopLayoutManager : MonoBehaviour {
 	GameObject[] allPlayerBalls;
 
-	public List<ShopItem> shopItems;
+	ShopItem[] shopArray;
+	List<ShopItem> shopItems;
 	ShopButton[] allButtons;
 
 	// Use this for initialization
@@ -28,6 +29,12 @@ public class ShopLayoutManager : MonoBehaviour {
 
 		allButtons = GetComponentsInChildren<ShopButton>();
         
+		shopArray = Resources.LoadAll<ShopItem>("ShopObjects");
+		shopItems = new List<ShopItem>();
+		foreach(ShopItem s in shopArray){
+			shopItems.Add(s);
+			Debug.Log(s.objectName);
+		}
 
 
 		shopItems.Sort(SortByPrice);

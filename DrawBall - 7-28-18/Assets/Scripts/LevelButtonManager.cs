@@ -10,23 +10,27 @@ public class LevelButtonManager : MonoBehaviour {
     
     public LevelButton[] levelButtons;
 	public int startLevelScene;
+	public TextMeshProUGUI worldTitle;
+
+	int sceneStartingNum = 0;
+	int worldNum = 1;
 
 
 
 	// Use this for initialization
 	void Start () {
         levelButtons = GetComponentsInChildren<LevelButton>();
-		SetNumbersForButtons();
+		SetNumbersForButtons(sceneStartingNum);
+		worldTitle.text = "World " + worldNum.ToString();
 	}
 
 
-	public void SetNumbersForButtons(){
-		for (int i = 0; i < levelButtons.Length; i++)
+	public void SetNumbersForButtons(int startNum){
+		for (int i = startNum; i < levelButtons.Length + startNum; i++)
 		{
-			levelButtons[i].SetLevelNumber(i + 1);
-			levelButtons[i].SetSceneToButton(startLevelScene + i);
+			levelButtons[i - startNum].SetLevelNumber(i + 1);
+			levelButtons[i - startNum].SetSceneToButton(startLevelScene + i);
 
-			Button newButton = levelButtons[i].GetComponent<Button>();
 		}
 
 	}
@@ -41,6 +45,24 @@ public class LevelButtonManager : MonoBehaviour {
         }
 
     }
+
+
+	public void MoveForwardInWorlds(){
+		sceneStartingNum += 20;
+		SetNumbersForButtons(sceneStartingNum);
+
+		worldNum++;
+		worldTitle.text = "World " + worldNum.ToString();
+
+	}
+
+	public void MoveBackwardWorlds(){
+		sceneStartingNum -= 20;
+		SetNumbersForButtons(sceneStartingNum);
+
+		worldNum--;
+        worldTitle.text = "World " + worldNum.ToString();
+	}
 
 
     

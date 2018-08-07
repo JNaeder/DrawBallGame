@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbae4c3219e2d41ddba4db3bf180f08e, type: 3}
+  m_Name: Clock
+  m_EditorClassIdentifier: 
+  objectImage: {fileID: 11400000, guid: 3090bd64e3a3b46fba3de7f0d1c3c3c1, type: 2}
+  objectName: Clock
+  price: 10
+  playerBall: {fileID: 1546408578700190, guid: 0493cd533ee6248e2bd1b69f9b83f656, type: 2}

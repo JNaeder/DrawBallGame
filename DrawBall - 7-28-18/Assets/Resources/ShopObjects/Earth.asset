@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbae4c3219e2d41ddba4db3bf180f08e, type: 3}
+  m_Name: Earth
+  m_EditorClassIdentifier: 
+  objectImage: {fileID: 11400000, guid: f0f9f214cbf964fec8c8d6eb650677ec, type: 2}
+  objectName: Earth
+  price: 50
+  playerBall: {fileID: 1824123510111406, guid: b405ade980c0e4a56aede00d00d57124, type: 2}

@@ -135,6 +135,7 @@ public class ShopButton : MonoBehaviour {
 			Color lockedColor = new Color(1, 1, 1, .25f);
 			itemImage.color = lockedColor;
 			buttonImage.color = lockedColor;
+			itemPrice.text = item.price.ToString();
 		}
 	}
 }
